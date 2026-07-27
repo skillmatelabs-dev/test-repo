@@ -38,4 +38,4 @@ def create_customer_old(email):
             "city": "San Francisco"
         }
     )
-    return customer
+    return customer# Added test function
