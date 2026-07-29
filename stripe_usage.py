@@ -7,8 +7,7 @@ stripe.api_key = "sk_test_123"
 def create_subscription_old(customer_id):
     subscription = stripe.Subscription.create(
         customer=customer_id,
-        plan="price_123",  # BREAKING: plan renamed to items[0].price
-        payment_behavior="default_incomplete",
+        items=[{'price': "price_123"}], payment_behavior="default_incomplete",
         expand=["latest_invoice.payment_intent"]
     )
     return subscription
