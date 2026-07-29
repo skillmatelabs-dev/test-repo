@@ -10,8 +10,7 @@ def make_call_old(to_number):
     call = client.calls.create(
         to=to_number,
         from_="+15551234567",
-        url="http://example.com/twiml"  # BREAKING: url renamed to twiml
-    )
+        twiml="http://example.com/twiml")
     return call
 
 # Old Twilio API - messages.list (deprecated)
